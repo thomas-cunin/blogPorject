@@ -29,7 +29,7 @@
           "skipTests": true
         },
         "@schematics/angular:application": {
-          "strict": true
+          "strict": false
         }
       },
       "root": "",
@@ -50,7 +50,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bulma/css/bulma.css",
+              "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js",
+              "./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"
             ],
             "scripts": []
           },

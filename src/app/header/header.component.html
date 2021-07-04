@@ -1,0 +1,63 @@
+<section *ngIf="showWarning" class="hero is-small is-danger has-text-centered ">
+  <div class="hero-body container ">
+    <p class="title ">
+      Accès interdit
+    </p>
+    <p class="subtitle">
+      Merci de vous connecter : <strong><a routerLinkActive='active' routerLink='auth'>Log In</a></strong>
+    </p>
+  </div>
+</section>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink=''>
+        Home
+      </a>
+      <a routerLinkActive="router-link-active" class="navbar-item" routerLink='cards'  >
+        Publications
+      </a>
+      <a routerLinkActive="router-link-active" class="navbar-item" routerLink='newcard'  >
+        New publication
+      </a>
+      <a routerLinkActive="router-link-active" class="navbar-item" routerLink='auth'  >
+        Login page
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a *ngIf = 'isAuth' class="button is-primary" (click)='logOut()'>
+            <strong>Log out</strong>
+          </a>
+          <a *ngIf = '!isAuth'class="button is-light" (click)='logIn()'>
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="hero is-link mb-3">
+    <div class="container hero-body">
+      <h1 class="title">
+        Bienvenue sur le blog des <strong>super poussins</strong>
+      </h1>
+      <p class="subtitle">
+        Des poussins <strong>hors du commun</strong>!
+      </p>
+    </div>
+</section>

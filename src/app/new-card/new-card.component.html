@@ -1,0 +1,97 @@
+<!-- <div class="block">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-half">
+            <form (ngsubmit)="" 
+            ([formGroup]="form")
+            >
+                <div class="field">
+                    <label class="label">Author name</label>
+                    <div class="control">
+                      <input class="input" type="text" formControlName="cardName" placeholder="Jhon Smith" ngModel name="name" id="name" required>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Image URL</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="www.photo.fr/assets/img/image.jpeg" ngModel  name="imageurl">
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <label class="label">tagName</label>
+                    <div class="control has-icons-left has-icons-right">
+                      <input class="input is-success" type="text" placeholder="Text input" value="bulma" ngModel required name="tagName" id="tagName">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Description</label>
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Your little description" ngModel name="description" id="description"></textarea>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Big description</label>
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Your big presentation" ngModel name="description" id="bigText"></textarea>
+                    </div>
+                  </div>
+                  <div class="field is-grouped">
+                    <div class="control">
+                      <button class="button is-link" (click)="testClick">Submit</button>
+                    </div>
+                    <div class="control">
+                      <button class="button is-link is-light" (click)="submitClick(1)" >Show</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-warning is-light" (click)="submitClick(0)">Hide</button>
+                      </div>
+                  </div>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="newCardRendered" class="columns is-mobile is-centered">
+        <div class="column is-half">
+          <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img [src]="newCard.image.src" [alt]="newCard.image.alt">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img class="is-rounded" src="../../assets/img/poussinavatar.jpeg">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">{{ newCard.author }}</p>
+                    <p class="subtitle is-6">@{{ newCard.tagName }}</p>
+                  </div>
+                </div>
+            
+                <div class="content">
+                  {{ newCard.description }}
+                  <br>
+                  <time datetime="2016-1-1">{{ newCard.date | date:'short' | lowercase }}</time>
+                </div>
+              </div>
+              <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <span>
+                      {{ newCard.commentNumber }} commentaires
+                    </span>
+                  </p>
+                  <p class="card-footer-item">
+                    <span>
+                      {{ newCard.likeNumber }} j'aime
+                    </span>
+                  </p>
+                </footer>
+            </div>
+        </div>
+      </div>
+</div> -->

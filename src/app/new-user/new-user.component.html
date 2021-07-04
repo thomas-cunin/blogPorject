@@ -1,0 +1,30 @@
+<div class="col-sm-8 col-sm-offset-2">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstName">Prénom :</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName" />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Nom :</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" class="form-control" id="email" formControlName="email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe :</label>
+        <input type="password" class="form-control" id="password" formControlName="password" />
+      </div>
+      <!-- <div class="form-group"> -->
+        <!-- <label for="drinkPreferences">Quelle boisson préférez-vous ?</label>
+        <select id="drinkPreferences" class="form-control" formControlName="drinkPreferences">
+          <option value="coffee">Café</option>
+          <option value="tea">Thé</option>
+          <option value="water">Eau</option>
+          <option value="beer">Bière</option>
+        </select>
+      </div> -->
+      <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Créer un nouvel utilisateur</button>
+    </form>
+  </div>

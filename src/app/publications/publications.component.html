@@ -1,0 +1,47 @@
+<div class="block m-6">
+    <div class="columns is-mobile is-centered" *ngFor="let card of cards">
+      <div class="column is-half">
+        <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img [src]="card.image.src" [alt]="card.image.alt">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img class="is-rounded" src="../../assets/img/poussinavatar.jpeg">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">{{ card.author }}</p>
+                  <p class="subtitle is-6">@{{ card.tagName }}</p>
+                </div>
+              </div>
+          
+              <div class="content">
+                {{ card.description }}
+                <br>
+                <div class="control">
+                  <button class="button is-link" (click)="goTo(card.id)">Submit</button>
+                </div>
+              </div>
+              <time datetime="2016-1-1">{{ card.date | date:'short' | lowercase }}</time>
+            </div>
+            <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    {{ card.commentNumber }} commentaires
+                  </span>
+                </p>
+                <p class="card-footer-item">
+                  <span>
+                    {{ card.likeNumber }} j'aime
+                  </span>
+                </p>
+              </footer>
+          </div>
+      </div>
+    </div>
+  </div>

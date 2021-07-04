@@ -1,0 +1,24 @@
+form builder,
+
+newProjectForm: FormGroup
+
+this.initForm()  <---- NgOnInit
+
+initform(): void {
+    this.newProjectForm = this.formBuilder.group ([
+        value, valdiators
+    ])
+}
+
+formControlName = "projectName" projectDescription...
+
+(ngSubmit)= "onSubmit" [formGroup] = "newProjectForm"
+
+onSubmit(): void {
+    const formValue = this.newProjectForm.value
+    const newProject = new Project(
+        this.projectService.getNewId(),
+        formValue['projectName'],
+        formValue['projectDescription']
+    )
+}

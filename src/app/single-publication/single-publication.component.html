@@ -1,0 +1,48 @@
+<div class="block m-6">
+    <div class="columns is-mobile is-centered" >
+      <div class="column is-half">
+        <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img [src]="projectService.cards[id].image.src" [alt]="projectService.cards[id].image.alt">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img class="is-rounded" src="../../assets/img/poussinavatar.jpeg">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">{{ projectService.cards[id].author }}</p>
+                  <p class="subtitle is-6">@{{ projectService.cards[id].tagName }}</p>
+                </div>
+              </div>
+          
+              <div class="content">
+                {{ projectService.cards[id].description }}
+                <br>
+                
+              </div>
+              <div class="content">
+                {{ projectService.cards[id].bigText }}
+                <br>
+              <time datetime="2016-1-1">{{ projectService.cards[id].date | date:'short' | lowercase }}</time>
+            </div>
+            <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    {{ projectService.cards[id].commentNumber }} commentaires
+                  </span>
+                </p>
+                <p class="card-footer-item">
+                  <span>
+                    {{ projectService.cards[id].likeNumber }} j'aime
+                  </span>
+                </p>
+              </footer>
+          </div>
+      </div>
+    </div>
+  </div>
