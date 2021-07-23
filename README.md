@@ -6,4 +6,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Project for study.
 
-With rxjs/rxjs-compat, HttpClient request (use with FireBase), Bulma is used to focus on the typescript.
+With rxjs/rxjs-compat, HttpClient request (use with FireBase), Bulma is used to be focus on the typescript.
